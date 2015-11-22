@@ -44,24 +44,6 @@ include('includes/busca-mini.php');
 	$(document).ready(function() {
 		getCategoryName();
 	});
-
-	function getCategoryName(){
-		categoryId = $('tr:nth-child(2) td:nth-child(3)').text();
-
-		$.ajax({
-			url: 'http://localhost/tbca/web/app.php/categorias/'+categoryId
-		})
-		.done(function(categoria) {
-			$('tr td:nth-child(3)').text(categoria.nome);
-		})
-		.fail(function() {
-			console.log("error");
-		})
-		.always(function() {
-			console.log("complete");
-		});
-		
-	}
 </script>
 <?php else: ?>
 	<?php include('includes/404.php') ?>

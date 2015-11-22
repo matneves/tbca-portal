@@ -36,3 +36,12 @@ include('includes/busca-mini.php');
 		</div>
 	</div>
 </div>
+
+<script type="text/javascript" src="js/paging.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		pagination(30);
+	});
+</script>
+
+<?php include('includes/footer.php'); ?>

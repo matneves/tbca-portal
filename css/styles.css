@@ -138,3 +138,12 @@ h1, h2, h3 {
 	border-left: 0;
 	border-right: 0;
 }
+
+#ul-pagination {
+	display: table;
+	margin: 0 auto;
+}
+
+.navigation li {
+
+}

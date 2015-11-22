@@ -6,7 +6,9 @@
 	<link rel="stylesheet" href="css/styles.css" type="text/css">
 	<link rel="stylesheet" href="css/bootstrap.css" type="text/css">
 
-	<script src="js/jquery.js"></script>
-	<script src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.ui.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/portal.js"></script>
 </head>
 <body>
