@@ -15,27 +15,8 @@ include('includes/header.php');
 
 <script type="text/javascript">
 	$(document).ready(function() {
-		$('.search-input').stop().keyup(function(event) {
-			searchData($(this).val());
-		});
-
 		getCategories();
 	});
-
-	function searchData(value) {
-		$.ajax({
-			url: 'http://tbca.mateusneves.com.br/alimentos/',
-			data: { nome: value },
-		})
-		.done(function(response) {
-			console.log(response);
-		})
-		.fail(function() {
-			console.log("error: searchData()");
-		})
-		.always(function() {
-		});
-	}
 
 	function getCategories(value) {
 		$.ajax({

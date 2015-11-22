@@ -2,7 +2,7 @@
 $title = "TBCA";
 include('includes/header.php');
 
-$url = "http://localhost/tbca/web/app.php/alimentos/?nome=".$_POST['nome'];
+$url = "http://tbca.mateusneves.com.br/alimentos/?nome=".$_GET['nome'];
 include('includes/curl.php');
 
 include('includes/busca-mini.php');

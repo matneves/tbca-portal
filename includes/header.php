@@ -7,5 +7,6 @@
 	<link rel="stylesheet" href="css/bootstrap.css" type="text/css">
 
 	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.js"></script>
 </head>
 <body>

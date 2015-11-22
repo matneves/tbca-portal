@@ -2,12 +2,13 @@
 $title = "TBCA";
 include('includes/header.php');
 
-$url = "http://localhost/tbca/web/app.php/alimentos/";
+$url = "http://tbca.mateusneves.com.br/alimentos/";
 include('includes/curl.php');
 
 include('includes/busca-mini.php');
 ?>
 
+<?php if(isset($_GET['id'])): ?>
 <div id="categoria">
 	<div class="container">
 		<div class="row">
@@ -62,5 +63,8 @@ include('includes/busca-mini.php');
 		
 	}
 </script>
+<?php else: ?>
+	<?php include('includes/404.php') ?>
+<?php endif; ?>
 
 <?php include('includes/footer.php'); ?>

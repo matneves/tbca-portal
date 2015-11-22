@@ -3,12 +3,11 @@ $title = "TBCA";
 include('includes/header.php');
 
 if(isset($_GET['id'])){
-	$url = "http://localhost/tbca/web/app.php/alimentos/".$_GET['id']."/nutrientes/";
+	$url = "http://tbca.mateusneves.com.br/alimentos/".$_GET['id']."/nutrientes/";
 	include('includes/curl.php');
 }
 
 include('includes/busca-mini.php'); 
-
 ?>
 
 <?php if(isset($_GET['id'])): ?>
@@ -43,7 +42,7 @@ if(!function_exists('fNum')){
 		<div class="row cinco">
 			<?php foreach ($alimento['nutrientes'] as $key => $value): ?>
 				<div class="nutriente">
-					<h3>
+					<h3 data-toggle="popover" data-placement="top" data-content="<a href='index.php'>Listar alimentos semelhantes em <?php echo $value['nome']; ?></a>">
 						<?php echo $value['nome']; ?>
 						<small><?php echo $value['unidade']; ?></small>
 					</h3>
@@ -56,6 +55,10 @@ if(!function_exists('fNum')){
 
 <script type="text/javascript">
 	$(document).ready(function(){
+		$('[data-toggle="popover"]').popover({
+			html: true,
+		});
+
 		$('#medida-atual').blur(function() {
 			medida = $(this).val();
 
@@ -73,5 +76,7 @@ if(!function_exists('fNum')){
 	});
 </script>
 <?php else: ?>
-	callErro();
+	<?php include('includes/404.php') ?>
 <?php endif; ?>
+
+<?php include('includes/footer.php'); ?>
