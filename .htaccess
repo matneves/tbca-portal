@@ -1,0 +1,6 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Página de exibição de um produto
+  RewriteRule ^alimento/([0-9]+)/?$ /alimento.php?id=$1 [NC]
+</IfModule>
