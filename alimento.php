@@ -36,7 +36,10 @@ include('includes/busca-mini.php');
 			<!-- <div class="row"> -->
 				<h1><?php echo $alimento['nome']; ?></h1>
 				<div id="medida-ajustavel">
-					<span>Valores referentes a </span><input id="medida-atual" value="100"> g
+					<span>Valores referentes a </span>
+					<input id="medida-atual" value="100">
+					<span> g</span>
+					<button class="btn btn-recalcular">Recalcular</button>
 				</div>
 			<!-- </div> -->
 			<div class="row">
@@ -76,7 +79,7 @@ include('includes/busca-mini.php');
 	<script type="text/javascript">
 		$(document).ready(function(){
 			$('[data-toggle="popover"]').popover({ html: true });
-			$('#medida-atual').blur(function(){
+			$('.btn-recalcular').click(function(){
 				recalcularNutrientes();
 			});
 

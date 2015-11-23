@@ -110,10 +110,29 @@ h1, h2, h3 {
 
 #medida-ajustavel {
 	font-size: 15px;
+	display: table;
+}
+
+#medida-ajustavel > * {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#medida-ajustavel span {
+	padding: 0 15px 0 5px;
+	line-height: 1;
 }
 
 #medida-ajustavel input {
 	width: 80px;
+}
+
+.btn-recalcular,
+.btn-recalcular:hover {
+	background-color: #132E37;
+	color: #fff !important;
+	height: 32px;
+	border-radius: 0 !important;
 }
 
 .popover {
@@ -154,5 +173,9 @@ h1, h2, h3 {
 
 	.nutriente h3 {
 		font-size: 20px;
+	}
+
+	#medida-ajustavel span {
+		font-size: 14px;
 	}
 }
