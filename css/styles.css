@@ -54,10 +54,16 @@ h1, h2, h3 {
 	background-color: rgb(255, 255, 255);
 	box-shadow: 1px 1.732px 4px 0px rgba(172, 172, 172, 0.196);
 	height: 100px;
-	padding: 43px 20px 0;
+	padding: 0 20px;
 	font-size: 14px;
 	text-align: center;
 	cursor: pointer;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#categorias .container .row > div {
+	display: table;
 	margin: 10px 0;
 }
 
