@@ -33,13 +33,13 @@ include('includes/busca-mini.php');
 
 	<div id="alimento">
 		<div class="container">
-			<div class="row">
+			<!-- <div class="row"> -->
 				<h1><?php echo $alimento['nome']; ?></h1>
 				<div id="medida-ajustavel">
 					<span>Valores referentes a </span><input id="medida-atual" value="100"> g
 				</div>
-			</div>
-			<div class="row cinco">
+			<!-- </div> -->
+			<div class="row">
 				<?php foreach ($alimento['nutrientes'] as $key => $value): ?>
 					<?php 
 					$nome 	= $value['nome'];
@@ -54,28 +54,33 @@ include('includes/busca-mini.php');
 					
 					$urlSimilar = "resultado-similar.php?nutriente=$nome&valor=$valor";
 					?>
-					<div class="nutriente">
-						<?php if (is_numeric($valorReal)): ?>
-							<h3 data-toggle="popover" data-placement="top" data-content="<a href='<?php echo $urlSimilar ?>'>Alimentos semelhantes: <?php echo $nome; ?></a>">
-						<?php else: ?>
-							<h3>
-						<?php endif ?>
-								<?php echo $nome; ?>
-								<small><?php echo $unidade; ?></small>
-							</h3>
-						<input data-valor-real="<?php echo $valorReal; ?>" value="<?php echo fNum($valor); ?>" readonly>
+					<div class="col-lg-3 col-sm-4 col-xs-6">
+						<div class="nutriente">
+							<?php if (is_numeric($valorReal)): ?>
+								<h3 data-toggle="popover" data-placement="top" data-content="<a href='<?php echo $urlSimilar ?>'>Alimentos semelhantes: <?php echo $nome; ?></a>">
+							<?php else: ?>
+								<h3>
+							<?php endif ?>
+									<?php echo $nome; ?>
+									<small><?php echo $unidade; ?></small>
+								</h3>
+							<input data-valor-real="<?php echo $valorReal; ?>" value="<?php echo fNum($valor); ?>" readonly>
+						</div>
 					</div>
 				<?php endforeach ?>
 			</div>
 		</div>
 	</div>
 
+	<script type="text/javascript" src="js/jquery.numeric.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
 			$('[data-toggle="popover"]').popover({ html: true });
 			$('#medida-atual').blur(function(){
 				recalcularNutrientes();
 			});
+
+			$('#medida-atual').numeric();
 		});
 	</script>
 <?php else: ?>

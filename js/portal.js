@@ -6,7 +6,7 @@ function getCategories(value) {
 		var cont = 0;
 
 		response.categorias.some(function(categoria) {
-			$('#categorias .row').append('<div class="categoria" onclick="loadCat('+categoria.id+')">'+categoria.nome+'</div>');
+			$('#categorias .row').append('<div class="col-lg-3 col-sm-4 col-xs-6" onclick="loadCat('+categoria.id+')"><div class="categoria">'+categoria.nome+'</div></div>');
 		});
 	})
 	.fail(function() {

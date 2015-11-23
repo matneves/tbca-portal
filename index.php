@@ -8,7 +8,7 @@ include('includes/header.php');
 <div id="categorias">
 	<div class="container">
 		<h2>Categorias</h2>
-		<div class="row cinco">
+		<div class="row">
 		</div>
 	</div>
 </div>

@@ -23,16 +23,11 @@ h1, h2, h3 {
 }
 
 #busca {
-	min-height: 300px;
+	padding: 100px 0;
 }
 
-#busca #busca-conteudo {
-	position: absolute;
-	width: 650px;
-	left: 50%;
-	margin-left: -325px;
-	top: 50%;
-	margin-top: -70px;
+#busca #busca-conteudo h1 {
+	margin-top: 0;
 }
 
 #busca .form-group,
@@ -63,6 +58,7 @@ h1, h2, h3 {
 	font-size: 14px;
 	text-align: center;
 	cursor: pointer;
+	margin: 10px 0;
 }
 
 #busca-mini {
@@ -127,6 +123,7 @@ h1, h2, h3 {
 	background: #fff;
 	border: 1px solid #ccc;
 	margin-top: -1px;
+	z-index: 2;
 }
 
 .autocomplete .list-group {
@@ -144,6 +141,12 @@ h1, h2, h3 {
 	margin: 0 auto;
 }
 
-.navigation li {
+@media screen and (max-width: 550px) {
+	#busca .titulo-principal {
+		font-size: 22px;
+	}
 
+	.nutriente h3 {
+		font-size: 20px;
+	}
 }
