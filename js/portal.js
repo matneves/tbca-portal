@@ -17,7 +17,7 @@ function getCategories(value) {
 }
 
 function loadCat(id){
-	window.location = "categoria.php?id="+id;
+	window.location = "categoria/"+id+"/";
 }
 
 function recalcularNutrientes(){
