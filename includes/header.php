@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-	$baseUrl = $_SERVER["HTTP_HOST"].DS;
+	$baseUrl = $_SERVER["HTTP_HOST"].'/';
 ?>
 <html>
 <head>
