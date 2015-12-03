@@ -36,13 +36,13 @@ function recalcularNutrientes(){
 }
 
 function getCategoryName(){
-	categoryId = $('tr:nth-child(2) td:nth-child(3)').text();
+	categoryId = $('tr:nth-child(2) td:nth-child(4)').text();
 
 	$.ajax({
 		url: 'http://tbca.mateusneves.com.br/categorias/'+categoryId+'/'
 	})
 	.done(function(response) {
-		$('tr td:nth-child(3)').text(response.categorias.nome);
+		$('tr td:nth-child(4)').text(response.categorias.nome);
 	})
 	.fail(function() {
 		console.log("error: getCategoryName()");
